@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { TrafficLightService } from '../../../services/traffic-light.service';
 
 @Component({
   selector: 'app-car1',
@@ -6,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./car1.component.scss']
 })
 export class Car1Component implements OnInit {
+  // lightSuscriptions : Subscription;
 
-  constructor() { }
+  constructor(
+    public TrafficLightService: TrafficLightService
+  ) { 
+
+    // this.lightSuscriptions = this.TrafficLightService.lights$.subscribe(console.log)
+  }
+
+  // ngOnDestroy(): void {
+  //   this.lightSuscriptions.unsubscribe()
+  // }
 
   ngOnInit(): void {
   }

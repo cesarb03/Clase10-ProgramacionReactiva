@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StreetPageComponent } from './street-page/street-page.component';
+import { SharedModule } from '../shared/shared.module';
+import { AnimesPageComponent } from './animes-page/animes-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
   declarations: [
-    StreetPageComponent
+    StreetPageComponent,
+    AnimesPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
-    StreetPageComponent
+    StreetPageComponent,
+    AnimesPageComponent
   ]
 })
 export class PagesModule { }

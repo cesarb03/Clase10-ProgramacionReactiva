@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TrafficLightService } from '../../../services/traffic-light.service';
+
 
 @Component({
   selector: 'app-car3',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Car3Component implements OnInit {
 
-  constructor() { }
+  constructor( public TrafficLightService: TrafficLightService ) { }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,18 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class AnimeService {
+  constructor(private http: HttpClient) {}
+
+  searchAnime(searchText: string): Observable<any> {
+    return this.http.get('https://api.jikan.moe/v4/anime', {
+      params: {
+        q: searchText
+      }
+    });
+  }
+}
