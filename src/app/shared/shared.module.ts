@@ -9,13 +9,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AnimeItemComponent } from './components/anime-item/anime-item.component';
 
 
 @NgModule({
   declarations: [  
     Car1Component,
     Car2Component,
-    Car3Component],
+    Car3Component,
+    AnimeItemComponent],
   
     imports: [
     CommonModule,
@@ -25,7 +27,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     Car2Component,
     Car3Component,
     MatCardModule,
-
+    AnimeItemComponent,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,

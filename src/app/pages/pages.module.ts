@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     SharedModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   exports: [
     StreetPageComponent,

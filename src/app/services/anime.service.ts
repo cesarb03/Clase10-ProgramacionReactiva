@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +13,7 @@ export class AnimeService {
       params: {
         q: searchText
       }
-    });
+    }).pipe(
+        map((valor: any) => valor.data ));
   }
 }
